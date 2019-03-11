@@ -1,9 +1,11 @@
 package com.basic.example;
 
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Restaurant {
+public class Restaurant extends InitDestroyAnnotationBeanPostProcessor implements InitializingBean {
     
     private Drink drink;
     private int age;
@@ -61,5 +63,15 @@ public class Restaurant {
         System.out.println(restaurant);
         Restaurant restaurant1 = (Restaurant) applicationContext.getBean("restaurant1");
         System.out.println(restaurant == restaurant1);
+    }
+    
+    @Override
+    public void afterPropertiesSet() throws Exception {
+    
+    }
+    
+    @Override
+    public void resetBeanDefinition(String beanName) {
+    
     }
 }
