@@ -1,0 +1,8 @@
+package com.basic.example;
+
+public class Coffee implements Drink{
+    @Override
+    public void getDrink() {
+    
+    }
+}
