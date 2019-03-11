@@ -59,5 +59,7 @@ public class Restaurant {
         
         Restaurant restaurant = (Restaurant) applicationContext.getBean("restaurant");
         System.out.println(restaurant);
+        Restaurant restaurant1 = (Restaurant) applicationContext.getBean("restaurant1");
+        System.out.println(restaurant == restaurant1);
     }
 }
