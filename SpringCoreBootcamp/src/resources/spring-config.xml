@@ -8,4 +8,10 @@
 
     <bean id="coffee" class="com.basic.example.Coffee"/>
 
+
+    <bean id="restaurant" class="com.basic.example.Restaurant">
+        <constructor-arg index="0" ref="coffee"/>
+        <constructor-arg index="1" value="Gaurav"/>
+        <property name="age" value="23"/>
+    </bean>
 </beans>
